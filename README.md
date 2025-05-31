@@ -18,26 +18,19 @@ Then we started the cluster.
 
 🎯 Application Deployment
 
-
-
 We used a java application for deployment. https://github.com/benc-uk/java-demoapp
 
 To deploy the application, we pulled the image pushed to the dockerhub address and defined it for deployment.
 
 ![alt text](image.png)
 
-
-
-After deploying the manifest files, we used a tunnel to access the domain.
-
-"minikube tunnel"
-
-
 🎯 Ingress Configuration
 
 We activated the ingress configuration in minikube to provide access via a domain address.
 
 "minikube addons enable ingress"
+
+![alt text](image-1.png)
 
 We created a self-signed SSL certificate for HTTPS. We used openssl for this.
 
@@ -46,3 +39,7 @@ We created a self-signed SSL certificate for HTTPS. We used openssl for this.
 We created a Kubernetes secret to provide the generated key and crt from outside.
 
 kubectl create secret tls java-demoapp-tls --cert=tls.crt --key=tls.key
+
+After deploying the manifest files, we used a tunnel to access the domain.
+
+"minikube tunnel"
