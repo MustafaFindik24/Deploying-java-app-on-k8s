@@ -51,3 +51,36 @@ However, this is not enough. Since this address is not registered on any DNS ser
 After the hosts file is saved, we can now access the address via the browser.
 
 ![alt text](image-2.png)
+
+🎯 Testing and Validation
+
+Our web application appears to be running, but there may be a problem with the backend services. If the pod is running but the API is not working, the pod will give an error and remain in the running state. To prevent this situation, we will use readiness and liveness probes in Kubernetes.
+
+![alt text](image-3.png)
+
+We receive a response about the status of the services at the "/actuator/health" endpoint. We used this for the liveness probe.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
