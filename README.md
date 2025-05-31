@@ -62,7 +62,11 @@ We receive a response about the status of the services at the "/actuator/health"
 
 ![alt text](image-4.png)
 
+For the readiness probe, we can use the "/info" endpoint.
 
+![alt text](image-5.png)
+
+After adding these settings to our manifest file, our application will now check whether the pod is running or not before accepting http traffic.
 
 
 
