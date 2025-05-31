@@ -60,7 +60,7 @@ Our web application appears to be running, but there may be a problem with the b
 
 We receive a response about the status of the services at the "/actuator/health" endpoint. We used this for the liveness probe.
 
-
+![alt text](image-4.png)
 
 
 
