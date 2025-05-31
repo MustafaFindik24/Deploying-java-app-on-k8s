@@ -43,3 +43,11 @@ kubectl create secret tls java-demoapp-tls --cert=tls.crt --key=tls.key
 After deploying the manifest files, we used a tunnel to access the domain.
 
 "minikube tunnel"
+
+However, this is not enough. Since this address is not registered on any DNS server, we will access it via the local system. For this, we add the address to our hosts file.
+
+"127.0.0.1 java-demoapp.example.com"
+
+After the hosts file is saved, we can now access the address via the browser.
+
+![alt text](image-2.png)
